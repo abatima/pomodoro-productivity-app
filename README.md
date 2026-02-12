@@ -15,7 +15,7 @@ The UI dynamically updates its color scheme and labels to indicate the current p
 * **Automated Logic Engine**: Handles the transition between Work, Short Break, and Long Break intervals based on repetition counts.
 * **Non-Blocking Timer**: Utilizes `Tkinter.after()` for a smooth, high-precision countdown without freezing the application interface.
 * **Visual Progress Tracking**: Automatically tallies completed sessions with visual checkmarks.
-* **Smart Notifications**: Includes a 'window bell' and `topmost` priority triggers to alert you when a session completes.
+* **Smart Notifications**: Includes a `window bell` and `topmost` priority triggers to alert you when a session completes.
 * **Clean UI**: Minimalist tomato-themed canvas with a clear, color-coded status display.
 
 ## 🛠️ Tech Stack
