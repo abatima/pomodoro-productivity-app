@@ -13,7 +13,15 @@ LONG_BREAK_MIN = 20
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 
-# ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
+# ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
+
+def start_timer():
+    count_down(5)
+
+def count_down(count):
+    canvas.itemconfig(timer_text, text=count)
+    if count > 0:
+        window.after(1000, count_down, count - 1)
 
 # ---------------------------- UI SETUP ------------------------------- #
 
@@ -27,7 +35,7 @@ timer_label.grid(column=1,row=0)
 checkmark_label = Label(text = "✔", font=(FONT_NAME, 20, "bold"), fg=GREEN, bg=YELLOW)
 checkmark_label.grid(column=1,row=3)
 
-button = Button(text="Start", highlightthickness=0)
+button = Button(text="Start", highlightthickness=0, command=start_timer)
 button.grid(column=0,row=2)
 
 button = Button(text="Reset", highlightthickness=0)
@@ -36,7 +44,7 @@ button.grid(column=2,row=2)
 canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
 tomato_img = PhotoImage(file="tomato.png")
 canvas.create_image(100,112, image= tomato_img)
-canvas.create_text(100, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
+timer_text = canvas.create_text(100, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
 canvas.grid(column=1,row=1)
 
 window.mainloop()
