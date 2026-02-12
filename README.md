@@ -1,6 +1,7 @@
 # Pomodoro Productivity App 🍅
 
-<img width="517" height="454" alt="image" src="https://github.com/user-attachments/assets/b795f2c0-cd7c-482f-9423-bb2995e8e041" />
+<img width="515" height="450" alt="image" src="https://github.com/user-attachments/assets/8594c8ff-04a7-4c82-a873-dd3ec53898a0" />
+
 
 
 An event-driven desktop productivity application built with Python and Tkinter. This project implements the **Pomodoro Technique**, utilizing a modular logic system to automate work intervals and restorative breaks. It features a non-blocking countdown mechanism and dynamic UI state management.
