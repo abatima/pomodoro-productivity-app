@@ -1,42 +1,46 @@
-# 🍅 Pomodoro Productivity App
+# Pomodoro Productivity App 🍅
 
-An interactive desktop productivity tool built with Python and Tkinter. This application automates the **Pomodoro Technique**, managing work intervals and restorative breaks to help users maintain high levels of focus and mental clarity throughout the day.
+An event-driven desktop productivity application built with Python and Tkinter. This project implements the **Pomodoro Technique**, utilizing a modular logic system to automate work intervals and restorative breaks. It features a non-blocking countdown mechanism and dynamic UI state management.
 
 ## 🕹️ How It Works
-The app follows the standard 4-cycle Pomodoro loop:
-1. **Work Session** (25 mins) - Focus on your task.
-2. **Short Break** (5 mins) - Stretch and hydrate.
-3. **Repeat** - Complete 4 work sessions.
-4. **Long Break** (20 mins) - Take a substantial recharge.
 
-The UI dynamically updates its color scheme and labels to indicate the current phase, and automatically brings the window to the front when a session ends.
+The application manages a cycle of focused work and timed breaks based on a repetition-tracking system:
+
+* **Work Session**: 25 minutes of high-focus activity.
+* **Short Break**: 5 minutes of rest after each work session.
+* **Long Break**: 20 minutes of restorative rest after every 4 work sessions (8 reps).
 
 ## ✨ Key Features
-* **Automated Logic Engine**: Handles the transition between Work, Short Break, and Long Break intervals based on repetition counts.
-* **Non-Blocking Timer**: Utilizes `Tkinter.after()` for a smooth, high-precision countdown without freezing the application interface.
-* **Visual Progress Tracking**: Automatically tallies completed sessions with visual checkmarks.
-* **Smart Notifications**: Includes a `window.bell` and `topmost` priority triggers to alert you when a session completes.
-* **Clean UI**: Minimalist tomato-themed canvas with a clear, color-coded status display.
+
+* **Event-Driven Countdown**: Implements the `.after()` method to handle time increments every 1000ms without interrupting the main UI loop.
+* **Integer-Based Formatting**: Uses floor division (`//`) and modulo (`%`) arithmetic to convert raw seconds into a clean `MM:SS` digital display.
+* **Dynamic State UI**: Automatically updates label text and foreground colors (`PINK`, `RED`, `GREEN`) to reflect the current session type.
+* **Automated Notifications**: Triggers the `window.bell()` sound and forces the window to the `topmost` layer upon session completion.
+* **Progress Persistence**: Tracks completed work sessions by dynamically updating checkmark labels based on the `reps` count.
 
 ## 🛠️ Tech Stack
+
 * **Language**: Python 3.x
-* **GUI Framework**: Tkinter
-* **Logic**: Event-driven programming with the `math` and `time` logic implementations.
+* **Library**: Tkinter (Standard GUI Library)
+* **Logic**: Procedural event-handling and integer arithmetic
 
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 * Python 3.x
-* A `tomato.png` image file in the project directory.
+* `tomato.png` asset file
 
 ### Installation
+
 1. Clone the repository:
-   ```bash
-   git clone [https://github.com/abatima/pomodoro-productivity-app.git](https://github.com/abatima/pomodoro-productivity-app.git)
+```bash
+git clone https://github.com/abatima/pomodoro-productivity-app.git
 
 ```
 
-2. Navigate to the project directory:
+
+2. Navigate to the directory:
 ```bash
 cd pomodoro-productivity-app
 
@@ -49,20 +53,15 @@ python main.py
 
 ```
 
-
-
 ## 🎮 Controls
 
-* **Start**: Initializes the countdown and repetition tracker.
-* **Reset**: Stops the current timer, clears all checkmarks, and resets the rep count.
+* **Start Button**: Triggers the `start_timer()` function to initiate the countdown.
+* **Reset Button**: Calls `reset_timer()`, canceling the active `after()` loop and clearing all session progress.
 
 ## 📜 License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+This project is open-source and available under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
 
 ---
 
-*Developed by [abatima*](https://www.google.com/search?q=https://github.com/abatima)
-
-
-```
+*Developed by [abatima*](https://github.com/abatima)
