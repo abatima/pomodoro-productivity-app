@@ -3,7 +3,7 @@
 An interactive desktop productivity tool built with Python and Tkinter. This application automates the **Pomodoro Technique**, managing work intervals and restorative breaks to help users maintain high levels of focus and mental clarity throughout the day.
 
 ## 🕹️ How It Works
-The app follows the standard 8-cycle Pomodoro loop:
+The app follows the standard 4-cycle Pomodoro loop:
 1. **Work Session** (25 mins) - Focus on your task.
 2. **Short Break** (5 mins) - Stretch and hydrate.
 3. **Repeat** - Complete 4 work sessions.
