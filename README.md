@@ -1,4 +1,4 @@
-# Pomodoro Productivity App 🍅
+# 🍅 Pomodoro Productivity App
 
 ## <img width="515" height="450" alt="image" src="https://github.com/user-attachments/assets/8594c8ff-04a7-4c82-a873-dd3ec53898a0" />
 
@@ -59,10 +59,6 @@ python main.py
 
 * **Start Button**: Triggers the `start_timer()` function to initiate the countdown.
 * **Reset Button**: Calls `reset_timer()`, canceling the active `after()` loop and clearing all session progress.
-
-## 📜 License
-
-This project is open-source and available under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
 
 ---
 
